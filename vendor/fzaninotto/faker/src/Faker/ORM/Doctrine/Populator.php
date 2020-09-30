@@ -69,7 +69,7 @@ class Populator
     }
 
     /**
-     * Populate the database using all the Entity classes previously added.
+     * Populate the database using all the Entities classes previously added.
      *
      * Please note that large amounts of data will result in more memory usage since the the Populator will return
      * all newly created primary keys after executing.

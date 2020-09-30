@@ -46,7 +46,7 @@ class Populator
     }
 
     /**
-     * Populate the database using all the Entity classes previously added.
+     * Populate the database using all the Entities classes previously added.
      *
      * @return array A list of the inserted entities.
      */

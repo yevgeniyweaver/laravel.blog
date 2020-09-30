@@ -23,7 +23,7 @@ namespace Doctrine\ORM\Cache;
 use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * Entity cache entry
+ * Entities cache entry
  *
  * @since   2.5
  * @author  Fabio B. Silva <fabio.bat.silva@gmail.com>

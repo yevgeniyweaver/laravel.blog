@@ -37,7 +37,7 @@ class ListenersInvoker
     const INVOKE_MANAGER    = 4;
 
     /**
-     * @var \Doctrine\ORM\Mapping\EntityListenerResolver The Entity listener resolver.
+     * @var \Doctrine\ORM\Mapping\EntityListenerResolver The Entities listener resolver.
      */
     private $resolver;
 
@@ -91,7 +91,7 @@ class ListenersInvoker
      *
      * @param \Doctrine\ORM\Mapping\ClassMetadata $metadata The entity metadata.
      * @param string $eventName                             The entity lifecycle event.
-     * @param object $entity                                The Entity on which the event occurred.
+     * @param object $entity                                The Entities on which the event occurred.
      * @param \Doctrine\Common\EventArgs $event             The Event args.
      * @param integer $invoke                               Bitmask to invoke listeners.
      */

@@ -11,14 +11,14 @@ class ComposerStaticInit1d1bd663e647ea0cd5de86fecce7a387
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '3375eb69ad3c4d68490f1e205fa24798' => __DIR__ . '/..' . '/laravel-doctrine/orm/src/helpers.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        '3375eb69ad3c4d68490f1e205fa24798' => __DIR__ . '/..' . '/laravel-doctrine/orm/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
     );
@@ -82,6 +82,7 @@ class ComposerStaticInit1d1bd663e647ea0cd5de86fecce7a387
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
             'LaravelDoctrine\\ORM\\' => 20,
+            'LaravelDoctrine\\Extensions\\' => 27,
         ),
         'J' => 
         array (
@@ -247,6 +248,10 @@ class ComposerStaticInit1d1bd663e647ea0cd5de86fecce7a387
         'LaravelDoctrine\\ORM\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel-doctrine/orm/src',
+        ),
+        'LaravelDoctrine\\Extensions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-doctrine/extensions/src',
         ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
@@ -2387,6 +2392,26 @@ class ComposerStaticInit1d1bd663e647ea0cd5de86fecce7a387
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
+        'LaravelDoctrine\\Extensions\\BeberleiExtensionsServiceProvider' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/BeberleiExtensionsServiceProvider.php',
+        'LaravelDoctrine\\Extensions\\Blameable\\BlameableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Blameable/BlameableExtension.php',
+        'LaravelDoctrine\\Extensions\\GedmoExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/GedmoExtension.php',
+        'LaravelDoctrine\\Extensions\\GedmoExtensionsServiceProvider' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/GedmoExtensionsServiceProvider.php',
+        'LaravelDoctrine\\Extensions\\IpTraceable\\IpTraceable' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/IpTraceable/IpTraceable.php',
+        'LaravelDoctrine\\Extensions\\IpTraceable\\IpTraceableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/IpTraceable/IpTraceableExtension.php',
+        'LaravelDoctrine\\Extensions\\Loggable\\LoggableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Loggable/LoggableExtension.php',
+        'LaravelDoctrine\\Extensions\\ResolveUserDecorator' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/ResolveUserDecorator.php',
+        'LaravelDoctrine\\Extensions\\Sluggable\\SluggableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Sluggable/SluggableExtension.php',
+        'LaravelDoctrine\\Extensions\\SoftDeletes\\SoftDeleteableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/SoftDeletes/SoftDeleteableExtension.php',
+        'LaravelDoctrine\\Extensions\\SoftDeletes\\SoftDeletes' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/SoftDeletes/SoftDeletes.php',
+        'LaravelDoctrine\\Extensions\\Sortable\\SortableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Sortable/SortableExtension.php',
+        'LaravelDoctrine\\Extensions\\Timestamps\\TimestampableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Timestamps/TimestampableExtension.php',
+        'LaravelDoctrine\\Extensions\\Timestamps\\Timestamps' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Timestamps/Timestamps.php',
+        'LaravelDoctrine\\Extensions\\Translatable\\TranslatableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Translatable/TranslatableExtension.php',
+        'LaravelDoctrine\\Extensions\\Tree\\NestedSet' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Tree/NestedSet.php',
+        'LaravelDoctrine\\Extensions\\Tree\\TreeExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Tree/TreeExtension.php',
+        'LaravelDoctrine\\Extensions\\Uploadable\\UploadableExtension' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Uploadable/UploadableExtension.php',
+        'LaravelDoctrine\\Extensions\\Uploadable\\UploadableExtensionServiceProvider' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Uploadable/UploadableExtensionServiceProvider.php',
+        'LaravelDoctrine\\Extensions\\Uploadable\\UploadableFacade' => __DIR__ . '/..' . '/laravel-doctrine/extensions/src/Uploadable/UploadableFacade.php',
         'LaravelDoctrine\\ORM\\AbstractTable' => __DIR__ . '/..' . '/laravel-doctrine/orm/src/AbstractTable.php',
         'LaravelDoctrine\\ORM\\Auth\\Authenticatable' => __DIR__ . '/..' . '/laravel-doctrine/orm/src/Auth/Authenticatable.php',
         'LaravelDoctrine\\ORM\\Auth\\DoctrineUserProvider' => __DIR__ . '/..' . '/laravel-doctrine/orm/src/Auth/DoctrineUserProvider.php',

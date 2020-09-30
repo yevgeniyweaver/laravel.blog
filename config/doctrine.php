@@ -4,10 +4,10 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Entity Mangers
+    | Entities Mangers
     |--------------------------------------------------------------------------
     |
-    | Configure your Entity Managers here. You can set a different connection
+    | Configure your Entities Managers here. You can set a different connection
     | and driver per manager and configure events and filters. Change the
     | paths setting to the appropriate path and replace App namespace
     | by your own namespace.

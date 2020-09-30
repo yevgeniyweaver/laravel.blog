@@ -45,7 +45,7 @@ class Populator
     }
 
     /**
-     * Populate the database using all the Entity classes previously added.
+     * Populate the database using all the Entities classes previously added.
      *
      * @param PropelPDO $con A Propel connection object
      *

@@ -142,7 +142,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
 
     /**
      * Adds a new default annotation driver with a correctly configured annotation reader. If $useSimpleAnnotationReader
-     * is true, the notation `@Entity` will work, otherwise, the notation `@ORM\Entity` will be supported.
+     * is true, the notation `@Entities` will work, otherwise, the notation `@ORM\Entities` will be supported.
      *
      * @param array $paths
      * @param bool  $useSimpleAnnotationReader

@@ -23,7 +23,7 @@ use Doctrine\ORM\PersistentCollection;
 use Doctrine\Common\Collections\Criteria;
 
 /**
- * Entity persister interface
+ * Entities persister interface
  * Define the behavior that should be implemented by all entity persisters.
  *
  * @author Fabio B. Silva <fabio.bat.silva@gmail.com>
