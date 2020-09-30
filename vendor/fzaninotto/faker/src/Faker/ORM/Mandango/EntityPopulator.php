@@ -92,7 +92,7 @@ class EntityPopulator
     }
 
     /**
-     * Insert one new record using the Entity class.
+     * Insert one new record using the Entities class.
      * @param Mandango $mandango
      */
     public function execute(Mandango $mandango, $insertedEntities)

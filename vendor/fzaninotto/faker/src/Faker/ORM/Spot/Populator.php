@@ -29,7 +29,7 @@ class Populator
     /**
      * Add an order for the generation of $number records for $entity.
      *
-     * @param $entityName string Name of Entity object to generate
+     * @param $entityName string Name of Entities object to generate
      * @param $number int The number of entities to populate
      * @param $customColumnFormatters array
      * @param $customModifiers array
@@ -59,7 +59,7 @@ class Populator
     }
 
     /**
-     * Populate the database using all the Entity classes previously added.
+     * Populate the database using all the Entities classes previously added.
      *
      * @param Locator $locator A Spot locator
      *

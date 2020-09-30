@@ -124,7 +124,7 @@ class DoctrinePresenceVerifier implements PresenceVerifierInterface
         $em = $this->registry->getManagerForClass($entity);
 
         if ($em === null) {
-            throw new InvalidArgumentException(sprintf("No Entity Manager could be found for [%s].", $entity));
+            throw new InvalidArgumentException(sprintf("No Entities Manager could be found for [%s].", $entity));
         }
 
         return $em;

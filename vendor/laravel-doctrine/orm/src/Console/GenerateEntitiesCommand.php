@@ -93,7 +93,7 @@ class GenerateEntitiesCommand extends Command
                 $entityGenerator->generate($metadatas, $destPath);
 
                 // Outputting information message
-                $this->comment(PHP_EOL . sprintf('Entity classes generated to "<info>%s</INFO>"', $destPath));
+                $this->comment(PHP_EOL . sprintf('Entities classes generated to "<info>%s</INFO>"', $destPath));
             }
         }
     }

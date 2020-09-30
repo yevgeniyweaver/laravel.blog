@@ -9,7 +9,7 @@ use Spot\Mapper;
 use Spot\Relation\BelongsTo;
 
 /**
- * Service class for populating a table through a Spot Entity class.
+ * Service class for populating a table through a Spot Entities class.
  */
 class EntityPopulator
 {
@@ -174,7 +174,7 @@ class EntityPopulator
     }
 
     /**
-     * Insert one new record using the Entity class.
+     * Insert one new record using the Entities class.
      *
      * @param $insertedEntities
      * @return string

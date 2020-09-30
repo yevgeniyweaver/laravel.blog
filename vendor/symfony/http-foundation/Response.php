@@ -171,7 +171,7 @@ class Response
         417 => 'Expectation Failed',
         418 => 'I\'m a teapot',                                               // RFC2324
         421 => 'Misdirected Request',                                         // RFC7540
-        422 => 'Unprocessable Entity',                                        // RFC4918
+        422 => 'Unprocessable Entities',                                        // RFC4918
         423 => 'Locked',                                                      // RFC4918
         424 => 'Failed Dependency',                                           // RFC4918
         425 => 'Too Early',                                                   // RFC-ietf-httpbis-replay-04

@@ -72,7 +72,7 @@ class AnnotationDriver extends AbstractAnnotationDriver
             }
         }
 
-        // Evaluate Entity annotation
+        // Evaluate Entities annotation
         if (isset($classAnnotations['Doctrine\ORM\Mapping\Entity'])) {
             $entityAnnot = $classAnnotations['Doctrine\ORM\Mapping\Entity'];
             if ($entityAnnot->repositoryClass !== null) {

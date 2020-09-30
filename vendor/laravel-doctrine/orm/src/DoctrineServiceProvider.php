@@ -124,7 +124,7 @@ class DoctrineServiceProvider extends ServiceProvider
      */
     protected function registerEntityManager()
     {
-        // Bind the default Entity Manager
+        // Bind the default Entities Manager
         $this->app->singleton('em', function ($app) {
             return $app->make('registry')->getManager();
         });
@@ -299,7 +299,7 @@ class DoctrineServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register the Entity factory instance in the container.
+     * Register the Entities factory instance in the container.
      *
      * @return void
      */

@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 
 /**
- * Service class for populating a table through a Doctrine Entity class.
+ * Service class for populating a table through a Doctrine Entities class.
  */
 class EntityPopulator
 {
@@ -169,7 +169,7 @@ class EntityPopulator
     }
 
     /**
-     * Insert one new record using the Entity class.
+     * Insert one new record using the Entities class.
      * @param ObjectManager $manager
      * @param bool $generateId
      * @return EntityPopulator

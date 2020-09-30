@@ -171,7 +171,7 @@ class EntityPopulator
     }
 
     /**
-     * Insert one new record using the Entity class.
+     * Insert one new record using the Entities class.
      */
     public function execute($con, $insertedEntities)
     {
