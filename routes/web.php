@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/admin', 'ObjectsController@index');
+
+Route::get('/admin/create', 'ObjectsController@create');
+
+//Route::get('/admin/edit/{id}', 'ObjectsController@edit')->where('id','[0-9]+');

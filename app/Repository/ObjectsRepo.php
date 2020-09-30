@@ -15,7 +15,7 @@ class ObjectsRepo
     /**
      * @var string
      */
-    private $class = 'App\Entity\Objects';
+    private $class = 'App\Entities\Objects';
     /**
      * @var EntityManager
      */
@@ -37,9 +37,9 @@ class ObjectsRepo
     public function update(Objects $objects, $data)
     {
         $objects->setTitle($data['title']);
-        $objects->setImage($data['body']);
-        $objects->setCategory($data['title']);
-        $objects->setDescription($data['body']);
+        $objects->setImage($data['image']);
+        $objects->setCategory($data['category']);
+        $objects->setDescription($data['description']);
         $this->em->persist($objects);
         $this->em->flush();
     }
@@ -61,7 +61,7 @@ class ObjectsRepo
      * create Post
      * @return Objects
      */
-    private function prepareData($data)
+    public function prepareData($data)
     {
         return new Objects($data);
     }

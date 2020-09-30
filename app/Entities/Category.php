@@ -1,17 +1,23 @@
 <?php
 
 namespace App\Entities;
-
+/**
+ * Created by PhpStorm.
+ * User: riset
+ * Date: 29.09.2020
+ * Time: 22:51
+ */
 use Doctrine\ORM\Mapping AS ORM;
-use Doctrine\ORM\Mapping\ManyToOne;
+use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 /**
  * @ORM\Entity
- * @ORM\Table(name="objects")
+ * @ORM\Table(name="category")
  */
 
-
-class Objects{
+class Category{
 
     /**
      * @ORM\Id
@@ -24,21 +30,8 @@ class Objects{
      * @var string
      * @ORM\Column(type="string")
      */
-    protected $image;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string")
-     * @ORM\ManyToOne(targetEntity="App\Entities\Category", inversedBy="objects")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    protected $category;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string")
-     */
     protected $title;
+
 
     /**
      * @var string
@@ -46,14 +39,18 @@ class Objects{
      */
     protected $description;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entities\Objects", mappedBy="category")
+     */
+    private $objects;
+
     public function __construct($input)
     {
         $this->setTitle($input['title']);
-        $this->setImage($input['image']);
-        $this->setCategory($input['category']);
         $this->setDescription($input['description']);
+        $this->setDescription($input['description']);
+        $this->objects = new ArrayCollection();
     }
-
 
 
     public function getId()
@@ -72,26 +69,6 @@ class Objects{
     }
 
 
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    public function setImage($image)
-    {
-        $this->title = $image;
-    }
-
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    public function setCategory($category)
-    {
-        $this->category = $category;
-    }
-
     public function getDescription()
     {
         return $this->description;
@@ -100,6 +77,14 @@ class Objects{
     public function setDescription($description)
     {
         $this->description = $description;
+    }
+
+    /**
+     * @return Collection|Objects[]
+     */
+    public function getProducts(): Collection
+    {
+        return $this->objects;
     }
 
 }
