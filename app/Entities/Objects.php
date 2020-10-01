@@ -5,9 +5,11 @@ namespace App\Entities;
 use Doctrine\ORM\Mapping AS ORM;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 /**
  * @ORM\Entity
- * @ORM\Table(name="objects")
+ * @ORM\Table(name="`objects`")
  */
 
 
@@ -24,6 +26,12 @@ class Objects{
      * @var string
      * @ORM\Column(type="string")
      */
+    protected $title;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string")
+     */
     protected $image;
 
     /**
@@ -33,12 +41,6 @@ class Objects{
      * @ORM\JoinColumn(nullable=false)
      */
     protected $category;
-
-    /**
-     * @var string
-     * @ORM\Column(type="string")
-     */
-    protected $title;
 
     /**
      * @var string
@@ -79,7 +81,7 @@ class Objects{
 
     public function setImage($image)
     {
-        $this->title = $image;
+        $this->image = $image;
     }
 
     public function getCategory()

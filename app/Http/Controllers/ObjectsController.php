@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repository\ObjectsRepo as repo;
 use App\Entities\Objects;
+use Doctrine\ORM\EntityManager;
+use function MongoDB\BSON\toJSON;
+
 //use App\Validation\PostValidator;
 
 class ObjectsController extends Controller
@@ -26,25 +29,30 @@ class ObjectsController extends Controller
 
     protected function create()//array $data
     {
+        $data =[];
+        $data['title'] = 'ryryyrry';
+        $data['image'] = '/img/one.jpg';
+        $data['category' ]= 1;
+        $data['description'] = 'first object';
+        //$data = [ 'category'=>1,'title'=>'ryryyrry','image'=>'imgonejpg','description'=>'first object' ];
 
-        $data = [ 'category'=>1,'image'=>'imgonejpg','title'=>'ryryyrry','description'=>'first object' ];
-//        $this->repo->create($this->repo->prepareData($data));
         //Session::flash('msg', 'add success');
-        $user = new Objects($data);
+        $re = new \ArrayObject($data);
+        $this->repo->create($this->repo->prepareData($data));
+//        $user = new Objects($re);
 //        $user->setTitle($data['title']);
 //        $user->setCategory($data['category']);
 //        $user->setImage($data['image']);
 //        $user->setDescription($data['description']);
 //        $user->setPassword(bcrypt($data['password']));
-//
-        \EntityManager::persist($user);
-        \EntityManager::flush();
-
+//        EntityManager::persist($user);
+//        EntityManager::flush();
        // return $user;
     }
 
     public function edit($id=NULL)
     {
+        //var_dump($this->repo->postOfId($id));
         return View('admin.index')->with(['data' => $this->repo->postOfId($id)]);
     }
 
@@ -83,5 +91,25 @@ class ObjectsController extends Controller
             return redirect()->back()->withErrors('operationFails');
         }
     }
-    
+
+
+    // show list of all objects
+    public function showAll()
+    {
+        $objects = $this->repo->showAll();
+        return view('admin.showAll', compact('objects') );
+    }
+
+
+    // if id is empty redirect to showAll action with list of all objects
+    public function show($id){
+        if(!empty($id)){
+            $object = $this->repo->show($id);
+//            $re = new \ArrayObject($this->repo->show($id));
+//            $b[] = json_decode(json_encode($this->repo->show($id)), true);
+            return view('admin.show', compact('object') );
+        }else{
+            return redirect()->action($this->showAll());
+        }
+    }
 }

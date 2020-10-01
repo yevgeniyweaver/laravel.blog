@@ -52,6 +52,30 @@ class Category{
         $this->objects = new ArrayCollection();
     }
 
+    /**
+     * @return Collection|Objects[]
+     */
+    public function getObjects(): Collection
+    {
+        return $this->objects;
+    }
+
+//    private $products;
+//
+//    public function __construct()
+//    {
+//        $this->products = new ArrayCollection();
+//    }
+//    /**
+//     * @return Collection|Product[]
+//     */
+//    public function getProducts(): Collection
+//    {
+//        return $this->products;
+//    }
+
+    // addProduct() and removeProduct() were also added
+
 
     public function getId()
     {
@@ -77,14 +101,6 @@ class Category{
     public function setDescription($description)
     {
         $this->description = $description;
-    }
-
-    /**
-     * @return Collection|Objects[]
-     */
-    public function getProducts(): Collection
-    {
-        return $this->objects;
     }
 
 }
